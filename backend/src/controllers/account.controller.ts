@@ -55,6 +55,7 @@ export const transferMoney = async(req:Request, res:Response) => {
     }catch(err) {
         console.log(err)
         session.abortTransaction()
+
         return res.sendStatus(500)
     }
 }

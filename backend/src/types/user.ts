@@ -11,17 +11,17 @@ export interface User {
 }
 
 export const userZodSchema = zod.object({
-    firstName:zod.string().min(5),
+    firstName:zod.string().min(4),
     lastName:zod.string(),
-    username:zod.string().min(5),
-    password:zod.string().min(5)
+    username:zod.string().min(4),
+    password:zod.string().min(4)
 })
 
 export const userZodSchemaOptional = zod.object({
-    firstName:zod.string().min(5).optional(),
+    firstName:zod.string().min(4).optional(),
     lastName:zod.string().optional(),
     username:zod.string().email().optional(),
-    password:zod.string().min(5).optional()
+    password:zod.string().min(4).optional()
 })
 
 
